@@ -12,15 +12,15 @@ fn align4(size: usize) -> usize {
     }
 }
 
-/// Read coredump (Proof of Concept).
+/// Read partial coredump (Proof of Concept).
 /// (it works only for ARM 32bits, for now)
 #[derive(Parser, Debug)]
 #[command(version, about, long_about = None)]
 struct Args {
-    /// Interface Name
+    /// Coredump file
     core: String,
 
-    /// Config file name
+    /// Address to be printed
     #[arg(short, long)]
     address: Vec<u32>,
 
